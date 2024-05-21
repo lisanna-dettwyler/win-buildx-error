@@ -45,5 +45,5 @@ jobs:
       with:
         driver: remote
         endpoint: npipe:////./pipe/buildkitd
-    - name: Buildx build
-      run: docker ${{ matrix.buildkit && 'buildx' }} build - < .github/docker/windows.Dockerfile
+    - name: Build
+      run: docker ${{ matrix.buildkit && 'buildx' || '' }} build - < .github/docker/windows.Dockerfile
