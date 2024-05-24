@@ -1,6 +1,5 @@
 on:
   push:
-    branches: [master]
 
 defaults:
   run:
